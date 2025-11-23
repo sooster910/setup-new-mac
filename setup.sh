@@ -51,7 +51,7 @@ echo -e "${GREEN}✓ Node v22.18.0 installed${NC}"
 # 5. Install Homebrew Cask applications
 echo ""
 echo -e "${BLUE}Step 5: Installing Cask applications...${NC}"
-brew install --cask raycast obsidian rectangle figma cursor postman chrome slack wakatime arc grabit docker warp daisyclean
+brew install --cask raycast obsidian rectangle figma cursor postman chrome slack wakatime arc grabit docker warp daisyclean font-maple-mono font-d2coding-nerd-font
 
 echo ""
 echo -e "${GREEN}=========================================="
@@ -64,6 +64,7 @@ echo "  • Git"
 echo "  • Neovim"
 echo "  • NVM (Node Version Manager)"
 echo "  • Node v22.18.0"
+echo "  • Fonts: Maple Mono, D2 Coding Nerd Font"
 echo "  • Cask apps: raycast, obsidian, rectangle, figma, cursor, postman,"
 echo "               chrome, slack, wakatime, arc, grabit, docker, warp, daisyclean"
 echo ""
