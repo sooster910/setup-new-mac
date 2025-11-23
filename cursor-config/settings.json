@@ -1,0 +1,236 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "atlascode.jira.lastCreateSiteAndProject": {
+    "siteId": "",
+    "projectKey": ""
+  },
+  "codestream.serverUrl": "https://codestream-api-v2-us1.service.newrelic.com",
+  "editor.accessibilitySupport": "off",
+  "editor.cursorWidth": 2,
+  "editor.fontFamily": "Maple Mono, D2Coding ligature",
+  "editor.fontSize": 13,
+  "editor.fontWeight": "500",
+  "editor.fontLigatures": true,
+  "editor.renderWhitespace": "selection",
+  "editor.smoothScrolling": true,
+  "editor.stickyScroll.enabled": true,
+  "errorLens.lintFilePaths": {
+    "Stylelint": [
+      "**/*.stylelintrc",
+      "**/*.stylelintrc.{cjs,js,json,yaml,yml}",
+      "**/*stylelint.config.{cjs,js}",
+      "**/*package.json"
+    ],
+    "eslint": ["**/*.eslintrc.{js,cjs,yaml,yml,json}", "**/*package.json"]
+  },
+  "git.autofetch": true,
+  "git.ignoredRepositories": [
+    "/Users/hyunsujoo/.cursor/extensions/stepsize.stepsize-1.0.15/resources/demo-repository"
+  ],
+  "git.openRepositoryInParentFolders": "always",
+  "github.copilot.editor.enableAutoCompletions": true,
+  "githubPullRequests.pullBranch": "never",
+  "gitlens.ai.experimental.model": "openai:gpt-4o",
+  "importCost.typescriptExtensions": ["\\.tsx?$"],
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "js/ts.implicitProjectConfig.target": "ESNext",
+  "prisma.showPrismaDataPlatformNotification": false,
+  "sonarlint.pathToNodeExecutable": "/Users/hyunsujoo/.nvm/versions/node/v20.11.0/bin/node",
+  "sonarlint.rules": {
+    "typescript:S2137": {
+      "level": "off"
+    },
+    "typescript:S6759": {
+      "level": "off"
+    }
+  },
+  "terminal.integrated.allowChords": false,
+  "terminal.integrated.automationProfile.windows": {},
+  "terminal.integrated.defaultProfile.windows": "",
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1",
+    "Q_NEW_SESSION": "1"
+  },
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "typescript.inlayHints.enumMemberValues.enabled": true,
+  "typescript.inlayHints.parameterTypes.enabled": true,
+  "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
+  "typescript.inlayHints.variableTypes.enabled": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "workbench.colorCustomizations": {
+    "[Vira*]": {
+      "toolbar.activeBackground": "#E9A58126",
+      "button.background": "#E9A581",
+      "button.hoverBackground": "#E9A581cc",
+      "extensionButton.separator": "#E9A58133",
+      "extensionButton.background": "#E9A58114",
+      "extensionButton.foreground": "#E9A581",
+      "extensionButton.hoverBackground": "#E9A58133",
+      "extensionButton.prominentForeground": "#E9A581",
+      "extensionButton.prominentBackground": "#E9A58114",
+      "extensionButton.prominentHoverBackground": "#E9A58133",
+      "activityBarBadge.background": "#E9A581",
+      "activityBar.activeBorder": "#E9A581",
+      "activityBarTop.activeBorder": "#E9A581",
+      "list.inactiveSelectionIconForeground": "#E9A581",
+      "list.activeSelectionForeground": "#E9A581",
+      "list.inactiveSelectionForeground": "#E9A581",
+      "list.highlightForeground": "#E9A581",
+      "sash.hoverBorder": "#E9A58180",
+      "list.activeSelectionIconForeground": "#E9A581",
+      "scrollbarSlider.activeBackground": "#E9A58180",
+      "editorSuggestWidget.highlightForeground": "#E9A581",
+      "textLink.foreground": "#E9A581",
+      "progressBar.background": "#E9A581",
+      "pickerGroup.foreground": "#E9A581",
+      "tab.activeBorder": "#E9A581",
+      "tab.activeBorderTop": "#E9A58100",
+      "tab.unfocusedActiveBorder": "#E9A581",
+      "tab.unfocusedActiveBorderTop": "#E9A58100",
+      "tab.activeModifiedBorder": "#E9A58100",
+      "notificationLink.foreground": "#E9A581",
+      "editorWidget.resizeBorder": "#E9A581",
+      "editorWidget.border": "#E9A581",
+      "settings.modifiedItemIndicator": "#E9A581",
+      "panelTitle.activeBorder": "#E9A581",
+      "breadcrumb.activeSelectionForeground": "#E9A581",
+      "menu.selectionForeground": "#E9A581",
+      "menubar.selectionForeground": "#E9A581",
+      "editor.findMatchBorder": "#E9A581",
+      "selection.background": "#E9A58140",
+      "statusBarItem.remoteBackground": "#E9A58114",
+      "statusBarItem.remoteHoverBackground": "#E9A581",
+      "statusBarItem.remoteForeground": "#E9A581",
+      "notebook.inactiveFocusedCellBorder": "#E9A58180",
+      "commandCenter.activeBorder": "#E9A58180",
+      "chat.slashCommandForeground": "#E9A581",
+      "chat.avatarForeground": "#E9A581",
+      "activityBarBadge.foreground": "#000000",
+      "button.foreground": "#000000",
+      "statusBarItem.remoteHoverForeground": "#000000",
+      "statusBar.debuggingBackground": "#E9A58133",
+      "statusBar.debuggingForeground": "#E9A581"
+    }
+  },
+  "workbench.iconTheme": "catppuccin-latte",
+  "workbench.productIconTheme": "fluent-icons",
+  "yaml.schemas": {
+    "file:///Users/hyunsujoo/.cursor/extensions/atlassian.atlascode-4.0.9-universal/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+  },
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
+  "sonarlint.focusOnNewCode": true,
+  "workbench.sideBar.location": "right",
+  "javascript.preferences.organizeImports": {},
+  "maven.terminal.favorites": [],
+  "editor.copyWithSyntaxHighlighting": false,
+  "better-comments.tags": [
+    {
+      "tag": "!",
+      "color": "#FF2D00",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "?",
+      "color": "#3498DB",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "//",
+      "color": "#474747",
+      "strikethrough": true,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "todo",
+      "color": "#FF8C00",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "*",
+      "color": "#98C379",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "done",
+      "color": "#ff79c666",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    }
+  ],
+  "git.suggestSmartCommit": false,
+  "diffEditor.hideUnchangedRegions.enabled": true,
+  "symbols.hidesExplorerArrows": false,
+  "git.confirmSync": false,
+  "viraTheme.accent": "Vira",
+  "codesnap.boxShadow": "0",
+  "codesnap.realLineNumbers": true,
+  "codesnap.containerPadding": "5px",
+  "[dockercompose]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "editor.cursorStyle": "block",
+  "editor.fontVariations": false,
+  "terminal.integrated.fontWeight": "normal",
+  "workbench.colorTheme": "Webstorm New Dark",
+  "custom-ui-style.stylesheet": {
+    /* 에디터 전체 */
+    ".monaco-editor .margin, .monaco-editor .glyph-margin": {
+      "width": "30px !important" /* 기본 40px 이상인 경우, 좁힘 */
+    },
+    /* 코드 시작 위치 padding 조정 */
+    ".monaco-editor .lines-content": {
+      "padding-left": "20px !important" /* 기본 8px 정도 -> 4px로 축소 */
+    },
+    /* 에디터 전체 테두리 둥글게 */
+    ".monaco-workbench .part.editor > .content .editor-container, .monaco-editor": {
+      "border-radius": "12px !important"
+      // "overflow": "hidden" /* 둥글게 자른 영역 안 보이게 */
+    },
+    /* 에디터 배경 이미지 적용 시 둥근 모서리 유지 */
+    ".monaco-editor .overflow-guard": {
+      "border-radius": "12px !important"
+    },
+    ".monaco-editor .cursors-layer > .cursor": {
+      "height": "16px !important"
+    }
+  },
+  "breadcrumbs.enabled": false
+}

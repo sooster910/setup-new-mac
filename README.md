@@ -26,6 +26,10 @@
 ### Cask Applications (GUI 앱)
 - raycast, obsidian, rectangle, figma, cursor, postman, chrome, slack, wakatime, arc, grabit, docker, warp, daisyclean
 
+### Cursor Editor
+- 150+ 개발 확장 프로그램
+- 커스텀 설정 (폰트, 테마, 레이아웃)
+
 ## 🚀 빠른 시작
 
 ### 방법 1: Step별로 따로 실행 (권장)
@@ -42,6 +46,7 @@ cd setup-new-mac
 ./steps/04-node.sh
 ./steps/05-cask.sh
 ./steps/06-zsh.sh
+./steps/07-cursor.sh   # Cursor 설정 (선택사항)
 ```
 
 ### 방법 2: 특정 step만 실행
@@ -74,7 +79,11 @@ setup-new-mac/
 │   ├── 03-nvm.sh        (NVM 설치)
 │   ├── 04-node.sh       (Node 설치)
 │   ├── 05-cask.sh       (앱 설치)
-│   └── 06-zsh.sh        (zsh 설정)
+│   ├── 06-zsh.sh        (zsh 설정)
+│   └── 07-cursor.sh     (Cursor 설정 및 확장)
+├── cursor-config/
+│   ├── settings.json     (Cursor 설정)
+│   └── extensions-list.txt (확장 프로그램 목록)
 ├── README.md
 └── SETUP_GUIDE.md
 ```

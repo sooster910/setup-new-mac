@@ -24,6 +24,10 @@
 ### Cask Applications (GUI 앱)
 - raycast, obsidian, rectangle, figma, cursor, postman, chrome, slack, wakatime, arc, grabit, docker, warp, daisyclean
 
+### Cursor Editor
+- 150+ 개발 확장 프로그램
+- 커스텀 설정 (폰트, 테마, 레이아웃)
+
 ---
 
 ## 🚀 사용 방법
@@ -62,6 +66,9 @@ cd setup-new-mac
 
 # Step 6: Zsh 설정
 ./steps/06-zsh.sh
+
+# Step 7: Cursor 설정 (선택사항)
+./steps/07-cursor.sh
 ```
 
 #### 방법 B: 전체 자동 실행
@@ -83,6 +90,9 @@ chmod +x setup.sh
 
 # Step 3 재실행 (실패했을 경우)
 ./steps/03-nvm.sh
+
+# Step 7만 실행 (Cursor 설정만)
+./steps/07-cursor.sh
 ```
 
 ---
@@ -122,6 +132,12 @@ chmod +x setup.sh
 - 기본 쉘을 zsh로 변경
 - **의존성: 없음**
 
+### Step 7: Cursor 설정 (선택사항)
+- Cursor 에디터 설정 파일 복사
+- 150+ 확장 프로그램 설치
+- 커스텀 폰트, 테마, 테마 색상 설정
+- **의존성: Step 5 필수** (Cursor가 설치되어 있어야 함)
+
 ---
 
 ## 💻 설치 완료 후
@@ -142,11 +158,21 @@ git --version  # git 버전
 zsh --version  # zsh 버전
 ```
 
+### Cursor 재시작 (Step 7 실행 후)
+Cursor를 완전히 종료했다가 다시 시작해야 모든 확장과 설정이 로드됩니다.
+
 ### 폰트 설정 (에디터)
-installed fonts는 `~/Library/Fonts/`에 저장됩니다.
-- **Cursor**: Settings → Font Family → "Maple Mono" 또는 "D2 Coding"
-- **VSCode**: Settings → Font Family → "Maple Mono Italic[wght]"
-- **터미널**: System Preferences → Profiles → Font → "D2 Coding Nerd Font"
+설치된 폰트는 `~/Library/Fonts/`에 저장됩니다.
+
+**Cursor**:
+- Settings → Font Family → "Maple Mono" 또는 "D2 Coding"
+- (Step 7 실행하면 자동 설정됨)
+
+**VSCode**:
+- Settings → Font Family → "Maple Mono Italic[wght]"
+
+**터미널**:
+- System Preferences → Profiles → Font → "D2 Coding Nerd Font"
 
 ---
 
@@ -156,6 +182,7 @@ installed fonts는 `~/Library/Fonts/`에 저장됩니다.
 2. **관리자 암호 필요** - 설치 중 여러 번 입력 요청
 3. **순서 중요** - Step 1-4는 순서대로 실행해야 합니다
 4. **시간 소요** - 전체 설치에 20-40분 소요
+5. **Step 7은 선택사항** - Cursor를 사용하지 않으면 스킵 가능
 
 ---
 
@@ -188,6 +215,10 @@ brew install --cask raycast
 brew install --cask figma
 ```
 
+### Cursor 확장 설치 실패
+- Step 7을 다시 실행해보세요
+- 또는 Cursor를 열어서 Extensions 탭에서 수동으로 설치
+
 ### Apple Silicon (M1/M2/M3) Mac에서 호환성 문제
 일부 구형 앱은 네이티브로 지원되지 않을 수 있습니다.
 필요시 Rosetta 2를 통해 실행하거나 대체 앱을 찾아보세요.
@@ -206,6 +237,7 @@ chsh -s /bin/zsh
 
 1. **선택적 설치**
    - 모든 앱이 필요 없으면 `steps/05-cask.sh`를 수정하세요
+   - Cursor를 사용하지 않으면 Step 7을 스킵하세요
 
 2. **정기적 업데이트**
    ```bash
@@ -220,6 +252,10 @@ chsh -s /bin/zsh
 
 4. **이미 설치된 것 건너뛰기**
    - 각 script는 자동으로 이미 설치된 항목을 감지하고 건너뜁니다
+
+5. **Cursor 확장 수동 설치**
+   - Step 7이 실패하면 Cursor를 열어서:
+   - Extensions → Search → 확장 이름 검색 → Install
 
 ---
 
