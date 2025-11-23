@@ -1,32 +1,28 @@
 # 🍎 새 맥북 개발 환경 자동 설치 가이드
 
-새 맥북에서 한 번의 명령어로 개발 환경을 완벽하게 세팅할 수 있습니다.
+새 맥북에서 개발 환경을 세팅하는 방법을 자세히 설명합니다.
 
 ## 📋 설치되는 것들
 
 ### Homebrew Formula
 - **git** - 버전 관리
-- **neovim** - 에디터
+- **neovim** - 터미널 에디터
 
 ### Node 환경
 - **NVM** (Node Version Manager) - Node 버전 관리자
 - **Node v22.18.0** - JavaScript 런타임
 
+### 터미널 환경
+- **Oh-My-Zsh** - 쉘 프레임워크
+- **Powerlevel10k** - 테마
+
+### 폰트
+- **Maple Mono** - 코딩 폰트
+- **D2 Coding** - 한글 지원 코딩 폰트
+- **D2 Coding Nerd Font** - 아이콘 지원 폰트
+
 ### Cask Applications (GUI 앱)
-- raycast - 맥 런처
-- obsidian - 노트 앱
-- rectangle - 윈도우 관리
-- figma - 디자인 도구
-- cursor - AI 코드 에디터
-- postman - API 테스트
-- chrome - 브라우저
-- slack - 커뮤니케이션
-- wakatime - 코딩 시간 추적
-- arc - 브라우저
-- grabit - 스크린샷
-- docker - 컨테이너 플랫폼
-- warp - 터미널
-- daisyclean - 앱 정리 도구
+- raycast, obsidian, rectangle, figma, cursor, postman, chrome, slack, wakatime, arc, grabit, docker, warp, daisyclean
 
 ---
 
@@ -34,7 +30,7 @@
 
 ### Step 1: 리포지토리 클론
 ```bash
-git clone https://github.com/hyunsujoo/setup-new-mac.git
+git clone https://github.com/sooster910/setup-new-mac.git
 cd setup-new-mac
 ```
 
@@ -42,82 +38,115 @@ cd setup-new-mac
 - GitHub에서 ZIP으로 다운로드
 - USB, AirDrop, iCloud Drive 등으로 전송
 
-### Step 2: 스크립트 실행 권한 부여
+### Step 2: 각 step 실행
+
+#### 방법 A: Step별로 따로 실행 (권장)
+
+**가장 안전하고 에러 추적이 쉬운 방법입니다.**
+
 ```bash
-chmod +x setup.sh
+# Step 1: Homebrew 설치
+./steps/01-homebrew.sh
+
+# Step 2: Git, Neovim 설치
+./steps/02-formula.sh
+
+# Step 3: NVM 설치
+./steps/03-nvm.sh
+
+# Step 4: Node v22.18.0 설치
+./steps/04-node.sh
+
+# Step 5: 앱 설치 (시간이 걸립니다)
+./steps/05-cask.sh
+
+# Step 6: Zsh 설정
+./steps/06-zsh.sh
 ```
 
-### Step 3: 스크립트 실행
+#### 방법 B: 전체 자동 실행
+
+**모든 step을 한 번에 실행합니다.**
+
 ```bash
+chmod +x setup.sh
 ./setup.sh
 ```
 
-### Step 4: 기다리기
-스크립트가 자동으로 모든 것을 설치합니다.
-- Homebrew 설치 (필요시)
-- 필수 도구 설치
-- NVM과 Node 설치
-- 모든 Cask 앱 설치
+#### 방법 C: 특정 step만 실행
 
-**설치 시간**: 10-30분 (인터넷 속도에 따라 다름)
+**이미 설치된 step을 스킵하고 싶을 때:**
 
-### Step 5: 확인
 ```bash
-node -v      # v22.18.0
-npm -v       # npm 버전 확인
-git --version # Git 버전 확인
+# Step 5만 실행 (Step 1-4는 이미 설치됨)
+./steps/05-cask.sh
+
+# Step 3 재실행 (실패했을 경우)
+./steps/03-nvm.sh
 ```
 
 ---
 
-## ⚙️ NVM으로 Node 버전 관리하기
+## ⚙️ 각 Step 상세 설명
 
-```bash
-# 설치된 Node 버전 확인
-nvm list
+### Step 1: Homebrew 설치
+- macOS 패키지 매니저 설치
+- 다른 모든 step의 기반
+- **의존성: 없음**
 
-# 다른 버전 설치
-nvm install 20.11.0
+### Step 2: Formula 설치
+- Git (버전 관리)
+- Neovim (터미널 에디터)
+- **의존성: Step 1 필수**
 
-# 버전 전환
-nvm use 22.18.0
+### Step 3: NVM 설치
+- Node Version Manager
+- Node 버전 관리 가능
+- **의존성: Step 1 필수**
 
-# 기본 버전 설정
-nvm alias default 22.18.0
-```
+### Step 4: Node 설치
+- Node v22.18.0
+- NPM도 함께 설치됨
+- **의존성: Step 3 필수**
 
-### 프로젝트별 Node 버전 설정
-프로젝트 루트에 `.nvmrc` 파일 생성:
-```
-22.18.0
-```
+### Step 5: Cask 앱 설치
+- 14개의 GUI 애플리케이션 설치
+- 3개의 폰트 설치
+- 시간이 가장 오래 걸림 (10-20분)
+- **의존성: Step 1 필수**
 
-그 후 `nvm use` 실행하면 자동으로 버전 전환:
-```bash
-nvm use
-```
+### Step 6: Zsh 설정
+- Oh-My-Zsh 설치
+- Powerlevel10k 테마 설치
+- .zshrc 설정
+- 기본 쉘을 zsh로 변경
+- **의존성: 없음**
 
 ---
 
-## 🔧 수동 설정 필요한 것들
+## 💻 설치 완료 후
 
-### Git 설정
+### 터미널 재시작
+새로운 터미널 탭을 열어야 설정이 적용됩니다.
+
+또는:
 ```bash
-git config --global user.name "Your Name"
-git config --global user.email "your.email@example.com"
+source ~/.zshrc
 ```
 
-### SSH 키 설정 (회사 가이드 참고)
+### 버전 확인
 ```bash
-# 새 SSH 키 생성
-ssh-keygen -t ed25519 -C "your.email@company.com"
-
-# 공개 키 확인
-cat ~/.ssh/id_ed25519.pub
+node -v        # v22.18.0
+npm -v         # npm 버전
+git --version  # git 버전
+zsh --version  # zsh 버전
 ```
 
-### 에디터 설정
-- Cursor, VSCode 등을 열고 개인 설정 또는 회사 설정 적용
+### 폰트 설정 (에디터)
+installed fonts는 `~/Library/Fonts/`에 저장됩니다.
+- **Cursor**: Settings → Font Family → "Maple Mono" 또는 "D2 Coding"
+- **VSCode**: Settings → Font Family → "Maple Mono Italic[wght]"
+- **터미널**: System Preferences → Profiles → Font → "D2 Coding Nerd Font"
 
 ---
 
@@ -125,8 +154,8 @@ cat ~/.ssh/id_ed25519.pub
 
 1. **인터넷 연결 필수** - 모든 파일을 다운로드합니다
 2. **관리자 암호 필요** - 설치 중 여러 번 입력 요청
-3. **시간 소요** - 앱이 많으므로 시간이 걸립니다
-4. **새로운 맥북 권장** - 기존 설치와의 충돌을 피하기 위해
+3. **순서 중요** - Step 1-4는 순서대로 실행해야 합니다
+4. **시간 소요** - 전체 설치에 20-40분 소요
 
 ---
 
@@ -134,51 +163,72 @@ cat ~/.ssh/id_ed25519.pub
 
 ### "Permission denied" 에러
 ```bash
-chmod +x setup.sh
+chmod +x steps/*.sh
 ```
 
-### Homebrew 설치 중 에러
+### Homebrew 설치 실패
 ```bash
-# Homebrew 설치 스크립트 직접 실행
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-### NVM 설치 후 `nvm` 명령어를 찾을 수 없음
-터미널을 재시작하거나:
+### NVM 명령어를 찾을 수 없음
 ```bash
+# 터미널 재시작 또는
 source ~/.zshrc
+
+# 또는 수동으로 NVM 로드
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 ```
 
 ### 특정 Cask 앱 설치 실패
+개별 설치 시도:
 ```bash
-# 개별 앱 설치 시도
 brew install --cask raycast
+brew install --cask figma
 ```
 
-### Apple Silicon (M1/M2/M3) Mac에서 문제
-일부 구형 앱은 Apple Silicon을 지원하지 않을 수 있습니다.
+### Apple Silicon (M1/M2/M3) Mac에서 호환성 문제
+일부 구형 앱은 네이티브로 지원되지 않을 수 있습니다.
 필요시 Rosetta 2를 통해 실행하거나 대체 앱을 찾아보세요.
+
+### Step 5 (Cask 설치)가 너무 오래 걸림
+정상입니다. 14개 앱과 3개 폰트 설치에 10-20분이 소요됩니다.
+
+### 쉘이 bash로 변경되었을 때
+```bash
+chsh -s /bin/zsh
+```
 
 ---
 
 ## 💡 팁
 
-1. **설치 후 첫 실행**
-   - 각 앱을 한 번씩 실행해서 초기 설정 진행
+1. **선택적 설치**
+   - 모든 앱이 필요 없으면 `steps/05-cask.sh`를 수정하세요
 
-2. **선택적 설치**
-   - 모든 앱이 필요 없다면 `setup.sh`를 수정해서 필요한 앱만 설치
-
-3. **정기적 업데이트**
+2. **정기적 업데이트**
    ```bash
    brew update
    brew upgrade
    ```
 
-4. **설치된 앱 확인**
+3. **설치된 앱 확인**
    ```bash
    brew list --cask
    ```
+
+4. **이미 설치된 것 건너뛰기**
+   - 각 script는 자동으로 이미 설치된 항목을 감지하고 건너뜁니다
+
+---
+
+## 📞 지원
+
+문제가 해결되지 않으면:
+1. 이 문서를 다시 읽어보세요
+2. GitHub Issues에서 유사한 문제를 찾아보세요
+3. GitHub Issues에 새로운 이슈를 등록하세요
 
 ---
 
