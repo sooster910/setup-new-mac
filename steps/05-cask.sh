@@ -21,7 +21,7 @@ echo "Installing applications..."
 echo "This may take a while..."
 echo ""
 
-brew install --cask raycast obsidian rectangle figma cursor postman chrome slack wakatime arc grabit docker warp daisyclean font-maple-mono font-d2coding font-d2coding-nerd-font
+brew install --cask raycast obsidian rectangle figma cursor postman google-chrome slack wakatime arc grabit docker warp daisydisk font-maple-mono font-d2coding font-d2coding-nerd-font
 
 echo -e "${GREEN}✓ All cask applications installed${NC}"
 
